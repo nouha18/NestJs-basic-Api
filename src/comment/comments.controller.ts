@@ -8,14 +8,14 @@ export class CommentController {
 constructor(private readonly  commentService:CommentService){}
 
     @Post('add') 
-     //http://localhost:3000/comment/add
+     //http://localhost:3000/comments/add
     addComment(@Body('content') content:string,@Body('author') author:string,@Body('date') date:Date,) : any{
     const generatedId = this.commentService.insertComment(content,author,date);
     return {id: generatedId};
     }
 
     @Get()
-    //http://localhost:3000/comment/
+    //http://localhost:3000/comments/
     async getAllComment(){
       const comment = await  this.commentService.getAllComment();
       return comment.map(com=>({id: com.id, content : com.content,author: com.author,date: com.date}));
