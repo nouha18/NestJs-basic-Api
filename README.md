@@ -59,16 +59,13 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
+![jwt_auth](https://user-images.githubusercontent.com/43494970/170343911-22b60130-482f-4dad-b76c-2f470117f868.png)
+
 
 ## Support
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+![postman](https://user-images.githubusercontent.com/43494970/170343848-6804081a-2a75-4edd-83cc-f5e5c908f163.png)
 
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
 
 ## License
 
