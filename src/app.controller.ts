@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import { Controller,Body,Request,Get,Header, Post, UseGuards } from '@nestjs/common';
+import { Controller,Body,Request,Get,Header,Render, Post, UseGuards } from '@nestjs/common';
 import { AppService } from './app.service';
 import {GetCurrentUserById} from './utils';
 import * as bcrypt from 'bcrypt';
@@ -7,16 +7,18 @@ import { AuthGuard } from '@nestjs/passport';
 import { LcalAuthGuard } from './utils/Gards/jwt-gards.gard';
 const saltedRound =10;
 
-@UseGuards(LcalAuthGuard)
+//@UseGuards(LcalAuthGuard)
 //appdomain.com/
 @Controller()
 export class AppController {
  constructor(private readonly appService: AppService) {}
 
 @Get()
+
 @Header('Content-Type','text/html')
-getHello(): {name: string} {
-  return {name:'alex'};
+@Render('index.hbs')
+  root() {
+    return { message: 'Hello world!' };
   }
 
  @Get()
